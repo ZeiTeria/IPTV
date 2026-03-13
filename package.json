@@ -1,0 +1,19 @@
+{
+  "name": "iptv-tester",
+  "version": "1.0.0",
+  "description": "Local IPTV channel tester - fetches, tests and filters iptv-org playlists",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test:id": "node index.js --country id",
+    "test:cn": "node index.js --country cn",
+    "test:tw": "node index.js --country tw",
+    "test:hk": "node index.js --country hk",
+    "test:zho": "node index.js --country zho",
+    "fast": "node index.js --skip-test"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
