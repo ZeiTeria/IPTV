@@ -1,9 +1,15 @@
 // ============================================================
-//  IPTV Local Tester v1 — Region-Based
+//  IPTV Local Tester v6 — Region-Based + GitHub Gist Upload
 //  - One playlist.m3u with regions as group folders
 //  - Region order: ID → Chinese → SE Asia → East Asia → Middle East/SA → Americas → Europe → Movies/Platforms
 //  - Global dedup: first URL seen wins
 //  - Tests every stream, saves blacklist.json
+//  - Auto-uploads playlist.m3u to GitHub Gist on finish
+//
+//  Setup:
+//    1. cp .env.example .env  →  fill in GITHUB_TOKEN and GIST_ID
+//    2. npm install
+//    3. node index.js
 //
 //  Usage:
 //    node index.js              → all regions, full stream test
@@ -11,6 +17,7 @@
 //    node index.js --region id  → specific region key only
 // ============================================================
 
+import "dotenv/config";
 import fetch from "node-fetch";
 import fs from "fs";
 import path from "path";
@@ -41,7 +48,7 @@ const REGIONS = [
     label: "🇮🇩 Indonesia",
     sources: [
       "https://iptv-org.github.io/iptv/countries/id.m3u",
-      // "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8",
+      "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8",
     ],
   },
 
@@ -346,6 +353,44 @@ async function processRegion(region, blacklist, globalSeen, skipTest) {
   return allAlive;
 }
 
+// ── Upload playlist to GitHub Gist ───────────────────────
+async function uploadToGist(content) {
+  const token  = process.env.GITHUB_TOKEN;
+  const gistId = process.env.GIST_ID;
+
+  if (!token || !gistId) {
+    console.log("⚠️  GITHUB_TOKEN or GIST_ID not set in .env — skipping Gist upload");
+    return;
+  }
+
+  console.log("☁️  Uploading to GitHub Gist...");
+  try {
+    const resp = await fetch(`https://api.github.com/gists/${gistId}`, {
+      method: "PATCH",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+        "User-Agent": "iptv-generator",
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+      body: JSON.stringify({
+        files: { "playlist.m3u": { content } },
+      }),
+    });
+
+    const data = await resp.json();
+    if (resp.ok) {
+      const rawUrl = data.files["playlist.m3u"]?.raw_url;
+      console.log(`✅ Gist updated: ${data.html_url}`);
+      console.log(`📋 Raw URL (use in IPTV player): ${rawUrl}`);
+    } else {
+      console.log(`❌ Gist upload failed: ${data.message}`);
+    }
+  } catch (err) {
+    console.log(`❌ Gist upload error: ${err.message}`);
+  }
+}
+
 // ── Main ──────────────────────────────────────────────────
 async function main() {
   const args = process.argv.slice(2);
@@ -366,7 +411,7 @@ async function main() {
   }
 
   const blacklist = loadBlacklist();
-  console.log(`\n🚀 IPTV Generator v1 — Region-Based`);
+  console.log(`\n🚀 IPTV Generator v5 — Region-Based`);
   console.log(`📋 Blacklist: ${blacklist.size} entries`);
   console.log(
     `🔧 Mode: ${
@@ -400,6 +445,9 @@ async function main() {
   console.log(`\n${"═".repeat(55)}`);
   console.log(`💾 Blacklist: ${blacklist.size} entries → blacklist.json`);
   console.log(`✅ Playlist:  ${totalAlive} channels → playlist.m3u`);
+
+  await uploadToGist(merged);
+
   console.log(`🎉 Done!\n`);
 }
 
