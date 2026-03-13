@@ -26,7 +26,7 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ── Config ────────────────────────────────────────────────
-const TIMEOUT_MS     = 4000;
+const TIMEOUT_MS     = 8000;  // increased for GET byte-sniff check
 const CONCURRENCY    = 20;
 const BLACKLIST_FILE = path.join(__dirname, "blacklist.json");
 const OUTPUT_FILE    = path.join(__dirname, "playlist.m3u");
@@ -48,7 +48,6 @@ const REGIONS = [
     label: "🇮🇩 Indonesia",
     sources: [
       "https://iptv-org.github.io/iptv/countries/id.m3u",
-      // "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8",
     ],
   },
 
@@ -121,46 +120,46 @@ const REGIONS = [
   // ════════════════════════════════════════════════════════
   //  6. 🌎 AMERICAS  (US + CA + MX + BR + AR + CO + CL + PE + VE)
   // ════════════════════════════════════════════════════════
-  {
-    key: "am",
-    label: "🌎 Americas",
-    sources: [
-      "https://iptv-org.github.io/iptv/countries/us.m3u",
-      "https://iptv-org.github.io/iptv/countries/ca.m3u",
-      "https://iptv-org.github.io/iptv/countries/mx.m3u",
-      "https://iptv-org.github.io/iptv/countries/br.m3u",
-      "https://iptv-org.github.io/iptv/countries/ar.m3u",
-      "https://iptv-org.github.io/iptv/countries/co.m3u",
-      "https://iptv-org.github.io/iptv/countries/cl.m3u",
-      "https://iptv-org.github.io/iptv/countries/pe.m3u",
-      "https://iptv-org.github.io/iptv/countries/ve.m3u",
-    ],
-  },
+  // {
+  //   key: "am",
+  //   label: "🌎 Americas",
+  //   sources: [
+  //     "https://iptv-org.github.io/iptv/countries/us.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/ca.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/mx.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/br.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/ar.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/co.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/cl.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/pe.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/ve.m3u",
+  //   ],
+  // },
 
-  // ════════════════════════════════════════════════════════
-  //  7. 🌍 EUROPE  (GB + DE + FR + IT + ES + NL + PL + PT + RU + UA + SE + NO + FI + AU + NZ)
-  // ════════════════════════════════════════════════════════
-  {
-    key: "eu",
-    label: "🌍 Europe",
-    sources: [
-      "https://iptv-org.github.io/iptv/countries/gb.m3u",
-      "https://iptv-org.github.io/iptv/countries/de.m3u",
-      "https://iptv-org.github.io/iptv/countries/fr.m3u",
-      "https://iptv-org.github.io/iptv/countries/it.m3u",
-      "https://iptv-org.github.io/iptv/countries/es.m3u",
-      "https://iptv-org.github.io/iptv/countries/nl.m3u",
-      "https://iptv-org.github.io/iptv/countries/pl.m3u",
-      "https://iptv-org.github.io/iptv/countries/pt.m3u",
-      "https://iptv-org.github.io/iptv/countries/ru.m3u",
-      "https://iptv-org.github.io/iptv/countries/ua.m3u",
-      "https://iptv-org.github.io/iptv/countries/se.m3u",
-      "https://iptv-org.github.io/iptv/countries/no.m3u",
-      "https://iptv-org.github.io/iptv/countries/fi.m3u",
-      "https://iptv-org.github.io/iptv/countries/au.m3u",
-      "https://iptv-org.github.io/iptv/countries/nz.m3u",
-    ],
-  },
+  // // ════════════════════════════════════════════════════════
+  // //  7. 🌍 EUROPE  (GB + DE + FR + IT + ES + NL + PL + PT + RU + UA + SE + NO + FI + AU + NZ)
+  // // ════════════════════════════════════════════════════════
+  // {
+  //   key: "eu",
+  //   label: "🌍 Europe",
+  //   sources: [
+  //     "https://iptv-org.github.io/iptv/countries/gb.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/de.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/fr.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/it.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/es.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/nl.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/pl.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/pt.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/ru.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/ua.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/se.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/no.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/fi.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/au.m3u",
+  //     "https://iptv-org.github.io/iptv/countries/nz.m3u",
+  //   ],
+  // },
 
   // ════════════════════════════════════════════════════════
   //  8. 🎬 MOVIES & PLATFORMS  (last priority)
@@ -212,21 +211,218 @@ function saveBlacklist(blacklist) {
 }
 
 // ── Test a single stream URL ──────────────────────────────
+// Strategy:
+//   1. Try HEAD first (fast)
+//   2. If HEAD fails or returns suspicious status, fallback to GET + read bytes
+//   3. Sniff first bytes to confirm actual media data (not HTML error page)
+const MEDIA_SIGNATURES = [
+  // HLS
+  Buffer.from("#EXTM3U"),
+  Buffer.from("#EXT-X-"),
+  // MPEG-TS
+  Buffer.from([0x47]),           // sync byte 0x47 repeated
+  // FLV
+  Buffer.from([0x46, 0x4C, 0x56]),
+  // MP4/ftyp
+  Buffer.from([0x66, 0x74, 0x79, 0x70]),
+  // RIFF (some streams)
+  Buffer.from([0x52, 0x49, 0x46, 0x46]),
+];
+
+function looksLikeMedia(buf) {
+  // MPEG-TS: 0x47 sync byte should repeat every 188 bytes
+  if (buf[0] === 0x47 && buf.length >= 188 && buf[188] === 0x47) return true;
+  return MEDIA_SIGNATURES.some((sig) => buf.slice(0, sig.length).equals(sig));
+}
+
 async function isAlive(url) {
+  // ── Step 1: HEAD check ──
+  try {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+    const resp = await fetch(url, {
+      method: "HEAD",
+      signal: controller.signal,
+      headers: { "User-Agent": "Mozilla/5.0", Accept: "*/*" },
+      redirect: "follow",
+    });
+    clearTimeout(timer);
+
+    if ([404, 410, 403, 401].includes(resp.status)) return false;
+    if (!resp.ok) throw new Error(`HEAD ${resp.status}`);
+
+    const ct = resp.headers.get("content-type") || "";
+    if (ct.includes("text/html")) throw new Error("HTML response");
+
+  } catch (err) {
+    const msg = err.message || "";
+    // DNS failure, connection refused, network unreachable → dead, skip GET
+    if (
+      msg.includes("ENOTFOUND") ||
+      msg.includes("ECONNREFUSED") ||
+      msg.includes("ECONNRESET") ||
+      msg.includes("ENETUNREACH") ||
+      msg.includes("EAI_AGAIN") ||
+      msg.includes("aborted")
+    ) return false;
+
+    // Other failures → fallback to GET byte sniff
+    return await getCheck(url);
+  }
+
+  return await getCheck(url);
+}
+
+async function getCheck(url) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+  try {
+    const resp = await fetch(url, {
+      method: "GET",
+      signal: controller.signal,
+      headers: { "User-Agent": "Mozilla/5.0", Accept: "*/*", Range: "bytes=0-4095" },
+      redirect: "follow",
+    });
+    clearTimeout(timer);
+
+    if ([404, 410, 403, 401].includes(resp.status)) return false;
+    if (!resp.ok && resp.status !== 206) return false;
+
+    // Read first 4KB
+    const chunks = [];
+    let total = 0;
+    for await (const chunk of resp.body) {
+      chunks.push(chunk);
+      total += chunk.length;
+      if (total >= 4096) break;
+    }
+    controller.abort();
+
+    if (total === 0) return false;
+
+    const buf = Buffer.concat(chunks).slice(0, 4096);
+    const text = buf.slice(0, 2048).toString("utf8");
+
+    // Reject HTML/JSON error pages
+    if (text.includes("<html") || text.includes("<!DOCTYPE")) return false;
+    if (text.trimStart().startsWith("{") && text.includes("error")) return false;
+
+    // ── HLS: parse m3u8 and validate a real segment ──
+    if (text.includes("#EXTM3U") || text.includes("#EXT-X-")) {
+      return await checkHlsSegment(url, text);
+    }
+
+    return looksLikeMedia(buf);
+
+  } catch {
+    clearTimeout(timer);
+    return false;
+  }
+}
+
+// ── HLS segment checker ───────────────────────────────────
+async function checkHlsSegment(masterUrl, playlistText) {
+  try {
+    const lines = playlistText.split("\n").map((l) => l.trim()).filter(Boolean);
+
+    // If master playlist → find first variant stream URL
+    let targetUrl = null;
+    for (const line of lines) {
+      if (line.startsWith("#EXT-X-STREAM-INF")) {
+        const nextLine = lines[lines.indexOf(line) + 1];
+        if (nextLine && !nextLine.startsWith("#")) {
+          targetUrl = resolveUrl(masterUrl, nextLine);
+          break;
+        }
+      }
+    }
+
+    // If media playlist → find first .ts or segment URL
+    if (!targetUrl) {
+      // fetch variant if needed
+      let mediaText = playlistText;
+      if (targetUrl) {
+        const r = await fetchWithTimeout(targetUrl);
+        if (!r) return false;
+        mediaText = r;
+      }
+      const mediaLines = mediaText.split("\n").map((l) => l.trim()).filter(Boolean);
+
+      // Check EXT-X-ENDLIST — VOD/ended stream, likely looping
+      // Only reject if segment count is suspiciously low (< 2)
+      const segments = mediaLines.filter(
+        (l) => !l.startsWith("#") && (l.endsWith(".ts") || l.endsWith(".aac") || l.includes(".ts?") || l.match(/\.(ts|aac|mp4|m4s|cmfv|fmp4)(\?|$)/i))
+      );
+
+      if (segments.length === 0) {
+        // Try any non-comment line as segment
+        const anySegs = mediaLines.filter((l) => !l.startsWith("#") && l.length > 0);
+        if (anySegs.length === 0) return false;
+        const segUrl = resolveUrl(targetUrl || masterUrl, anySegs[0]);
+        return await segmentAlive(segUrl);
+      }
+
+      // Check first segment is reachable
+      const segUrl = resolveUrl(targetUrl || masterUrl, segments[0]);
+      return await segmentAlive(segUrl);
+    }
+
+    // Fetch the variant playlist
+    const variantText = await fetchWithTimeout(targetUrl);
+    if (!variantText) return false;
+
+    const variantLines = variantText.split("\n").map((l) => l.trim()).filter(Boolean);
+    const segments = variantLines.filter((l) => !l.startsWith("#") && l.length > 0);
+    if (segments.length === 0) return false;
+
+    const segUrl = resolveUrl(targetUrl, segments[0]);
+    return await segmentAlive(segUrl);
+
+  } catch {
+    return false;
+  }
+}
+
+// ── Helpers ───────────────────────────────────────────────
+function resolveUrl(base, relative) {
+  if (relative.startsWith("http://") || relative.startsWith("https://")) return relative;
+  try {
+    return new URL(relative, base).href;
+  } catch {
+    return relative;
+  }
+}
+
+async function fetchWithTimeout(url) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+  try {
+    const resp = await fetch(url, {
+      signal: controller.signal,
+      headers: { "User-Agent": "Mozilla/5.0", Accept: "*/*" },
+      redirect: "follow",
+    });
+    clearTimeout(timer);
+    if (!resp.ok) return null;
+    return await resp.text();
+  } catch {
+    clearTimeout(timer);
+    return null;
+  }
+}
+
+async function segmentAlive(url) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
   try {
     const resp = await fetch(url, {
       method: "HEAD",
       signal: controller.signal,
-      headers: {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-        Accept: "*/*",
-      },
+      headers: { "User-Agent": "Mozilla/5.0", Accept: "*/*" },
       redirect: "follow",
     });
     clearTimeout(timer);
-    return ![404, 410].includes(resp.status);
+    return resp.ok || resp.status === 206;
   } catch {
     clearTimeout(timer);
     return false;
@@ -287,7 +483,7 @@ function rewriteGroup(extinf, label) {
 }
 
 // ── Fetch & filter one M3U URL ────────────────────────────
-async function fetchSource(url, label, blacklist, globalSeen, skipTest) {
+async function fetchSource(url, label, blacklist, globalSeen, seenNames, skipTest) {
   let text;
   try {
     const resp = await fetch(url, { headers: { "User-Agent": "Mozilla/5.0" } });
@@ -315,6 +511,12 @@ async function fetchSource(url, label, blacklist, globalSeen, skipTest) {
     if (INSTANT_BLOCKED.some((p) => p.test(ch.extinf) || p.test(ch.name))) {
       blacklist.add(ch.url); instantBlocked++; continue;
     }
+
+    // ── Name-based dedup within same region ──
+    const nameKey = ch.name.toLowerCase().trim();
+    if (nameKey && seenNames.has(nameKey)) { dupes++; continue; }
+    if (nameKey) seenNames.add(nameKey);
+
     toTest.push(ch);
   }
 
@@ -343,9 +545,11 @@ async function processRegion(region, blacklist, globalSeen, skipTest) {
   console.log(`${"═".repeat(55)}`);
 
   const allAlive = [];
+  const seenNames = new Set(); // name dedup scoped per region
+
   for (const url of region.sources) {
     console.log(`  → ${url}`);
-    const alive = await fetchSource(url, region.label, blacklist, globalSeen, skipTest);
+    const alive = await fetchSource(url, region.label, blacklist, globalSeen, seenNames, skipTest);
     allAlive.push(...alive);
   }
 
@@ -398,6 +602,7 @@ async function main() {
     ? args[args.indexOf("--region") + 1]
     : "all";
   const skipTest = args.includes("--skip-test");
+  const checkOnly = args.includes("--check"); // dry-run: no save, no gist upload
 
   const regions =
     regionArg === "all"
@@ -415,7 +620,9 @@ async function main() {
   console.log(`📋 Blacklist: ${blacklist.size} entries`);
   console.log(
     `🔧 Mode: ${
-      skipTest
+      checkOnly
+        ? "Check only (no save, no upload)"
+        : skipTest
         ? "Filter only (no stream testing)"
         : `Full test (${CONCURRENCY} concurrent, ${TIMEOUT_MS}ms timeout)`
     }`
@@ -431,6 +638,7 @@ async function main() {
     totalAlive += alive.length;
 
     if (alive.length > 0) {
+      alive.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
       merged += `\n# ═══ ${region.label} — ${alive.length} channels ═══\n`;
       for (const ch of alive) {
         merged += rewriteGroup(ch.extinf, region.label) + "\n" + ch.url + "\n";
@@ -440,6 +648,14 @@ async function main() {
 
   saveBlacklist(blacklist);
   merged += `\n# ✅ Total: ${totalAlive} channels | blacklist: ${blacklist.size} entries\n`;
+
+  if (checkOnly) {
+    console.log(`\n${"═".repeat(55)}`);
+    console.log(`🔍 Check complete — ${totalAlive} channels alive`);
+    console.log(`⚠️  Nothing saved (--check mode)\n`);
+    return;
+  }
+
   fs.writeFileSync(OUTPUT_FILE, merged);
 
   console.log(`\n${"═".repeat(55)}`);
