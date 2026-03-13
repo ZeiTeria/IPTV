@@ -4,8 +4,12 @@ Auto-updated IPTV playlist — refreshed every day via GitHub Actions.
 
 ## 📡 Playlist URL
 
+Full Link
 ```
-https://gist.githubusercontent.com/ZeiTeria/68851fb02bbb95525d89ff0ff0afceae/raw/f57cc05de171f81277d56533d9b26a5bb182de36/playlist.m3u
+https://gist.githubusercontent.com/ZeiTeria/68851fb02bbb95525d89ff0ff0afceae/raw/playlist.m3u
+```
+Short Link
+```
 https://rebrand.ly/IPTVZei
 ```
 

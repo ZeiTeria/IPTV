@@ -48,7 +48,7 @@ const REGIONS = [
     label: "🇮🇩 Indonesia",
     sources: [
       "https://iptv-org.github.io/iptv/countries/id.m3u",
-      "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8",
+      // "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8",
     ],
   },
 
