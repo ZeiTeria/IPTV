@@ -30,6 +30,7 @@ const TIMEOUT_MS     = 8000;  // increased for GET byte-sniff check
 const CONCURRENCY    = 20;
 const BLACKLIST_FILE = path.join(__dirname, "blacklist.json");
 const OUTPUT_FILE    = path.join(__dirname, "playlist.m3u");
+const CUSTOM_FILE    = path.join(__dirname, "custom.m3u");
 
 // ─────────────────────────────────────────────────────────────────────────────
 //  REGIONS
@@ -118,7 +119,7 @@ const REGIONS = [
   },
 
   // ════════════════════════════════════════════════════════
-  //  6. 🌎 AMERICAS  (US + CA + MX + BR + AR + CO + CL + PE + VE)
+  //  6. 🌎 AMERICAS — disabled
   // ════════════════════════════════════════════════════════
   // {
   //   key: "am",
@@ -136,9 +137,9 @@ const REGIONS = [
   //   ],
   // },
 
-  // // ════════════════════════════════════════════════════════
-  // //  7. 🌍 EUROPE  (GB + DE + FR + IT + ES + NL + PL + PT + RU + UA + SE + NO + FI + AU + NZ)
-  // // ════════════════════════════════════════════════════════
+  // ════════════════════════════════════════════════════════
+  //  7. 🌍 EUROPE — disabled
+  // ════════════════════════════════════════════════════════
   // {
   //   key: "eu",
   //   label: "🌍 Europe",
@@ -601,8 +602,52 @@ async function main() {
   const regionArg = args.includes("--region")
     ? args[args.indexOf("--region") + 1]
     : "all";
+  // ── Gist-only mode: merge existing playlist + custom → upload ──
+  if (args.includes("--gist")) {
+    if (!fs.existsSync(OUTPUT_FILE)) {
+      console.error("❌ playlist.m3u not found — run without --gist first to generate it");
+      process.exit(1);
+    }
+    console.log("\n🚀 Gist-only mode — merging & uploading...");
+    let content = fs.readFileSync(OUTPUT_FILE, "utf8");
+
+    if (fs.existsSync(CUSTOM_FILE)) {
+      const customChannels = parseM3U(fs.readFileSync(CUSTOM_FILE, "utf8"));
+      const seen = new Set();
+      // collect existing URLs from playlist to avoid dupe
+      parseM3U(content).forEach((ch) => seen.add(ch.url));
+      const newCustom = customChannels.filter((ch) => {
+        if (seen.has(ch.url)) return false;
+        seen.add(ch.url);
+        return true;
+      });
+      if (newCustom.length > 0) {
+        content += `\n# ═══ ⭐ Custom Channels — ${newCustom.length} channels ═══\n`;
+        for (const ch of newCustom) content += ch.extinf + "\n" + ch.url + "\n";
+        console.log(`⭐ Custom merged: ${newCustom.length} channels`);
+      }
+    }
+
+    await uploadToGist(content);
+    console.log("🎉 Done!\n");
+    return;
+  }
+
+  // ── Upload only mode ──────────────────────────────────
+  if (args.includes("--upload-only")) {
+    if (!fs.existsSync(OUTPUT_FILE)) {
+      console.error("❌ playlist.m3u not found — run without --upload-only first");
+      process.exit(1);
+    }
+    const content = fs.readFileSync(OUTPUT_FILE, "utf8");
+    console.log("\n🚀 Upload-only mode");
+    await uploadToGist(content);
+    console.log("🎉 Done!\n");
+    return;
+  }
+
   const skipTest = args.includes("--skip-test");
-  const checkOnly = args.includes("--check"); // dry-run: no save, no gist upload
+  const checkOnly = args.includes("--check");
 
   const regions =
     regionArg === "all"
@@ -648,6 +693,23 @@ async function main() {
 
   saveBlacklist(blacklist);
   merged += `\n# ✅ Total: ${totalAlive} channels | blacklist: ${blacklist.size} entries\n`;
+
+  // ── Merge custom.m3u if exists ────────────────────────
+  if (fs.existsSync(CUSTOM_FILE)) {
+    const customText = fs.readFileSync(CUSTOM_FILE, "utf8");
+    const customChannels = parseM3U(customText).filter((ch) => {
+      if (globalSeen.has(ch.url)) return false;
+      globalSeen.add(ch.url);
+      return true;
+    });
+    if (customChannels.length > 0) {
+      merged += `\n# ═══ ⭐ Custom Channels — ${customChannels.length} channels ═══\n`;
+      for (const ch of customChannels) {
+        merged += ch.extinf + "\n" + ch.url + "\n";
+      }
+      console.log(`⭐ Custom channels merged: ${customChannels.length} from custom.m3u`);
+    }
+  }
 
   if (checkOnly) {
     console.log(`\n${"═".repeat(55)}`);
