@@ -2905,7 +2905,7 @@ https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 #EXTINF:-1 tvg-id="Zoom.in@Global" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZOOM/images/LOGO_HD/image.png" group-title="🌍 Middle East & South Asia",Zoom Global (720p)
 https://d14c63magvk61v.cloudfront.net/strm/channels/zoom/master.m3u8
 
-# ═══ 🎬 Movies & Platforms — 895 channels ═══
+# ═══ 🎬 Movies & Platforms — 898 channels ═══
 #EXTINF:-1 tvg-logo="https://images.vizio.com/v4/btv/1/1664636384/1/267/150/0.jpg" group-title="🎬 Movies & Platforms",12 News KWCH Wichita
 https://amg00312-amg00312c39-amgplt0022.playout.now3.amagi.tv/ts-us-e2-n2/playlist/amg00312-amg00312c39-amgplt0022/playlist.m3u8?url=%7bDOMAIN%7d&app_name=%7bAPP_NAME%7d&gpp=%7bGPP%7d&schain=%7bSCHAIN%7d&w=%7bWIDTH%7d&app_bundle=%7bAPP_BUNDLE%7d&content_livestream=%7bCONTENT_LIVESTREAM%7d&ifa_type=%7bIFATYPE%7d&pod_ad_slots=%7bPOD_AD_SLOTS%7d&ic=%7bIC%7d&inv_partner_domain=%7bINV_PARTNER_DOMAIN%7d&is_lat=%7bIS_LAT%7d&network_name=%7bNETWORK_NAME%7d&app_store_url=%7bAPP_STORE_URL%7d&iu=%7bIU%7d&tv_ad_id=%7bTV_AD_ID%7d&us_privacy=%7bUSPRIVACY%7d&ad_pos=%7bAD_POS%7d&channel_name=%7bCHANNEL_NAME%7d&did=%7bADID%7d&idtype=%7bIDTYPE%7d&vizio_network_name=%7b%7bVIZIO_NETWORK_NAME%7d%7d&dnt=%7bDNT%7d&gpp_sid=%7bGPP_SID%7d&h=%7bHEIGHT%7d&lmt=%7bLMT%7d&device_make=%7bDEVICE_MAKE%7d&prodq=%7bPRODQ%7d&coppa=0&skip=%7bSKIPPABLE%7d&vizdartoken=eyJhdWQiOiI5MyIsIndmcGNpZCI6NDIwNzk5NDQyMH0
 #EXTINF:-1 tvg-logo="https://images.vizio.com/v4/btv/1/1664636427/1/267/150/0.jpg" group-title="🎬 Movies & Platforms",12 On Your Side Richmond
@@ -3474,8 +3474,8 @@ https://live-manifest.production-public.tubi.io/live/7d346182-3c47-4c64-b8d6-cca
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00488-foxdigital-fox35orlandowofl-vizious/playlist.m3u8?did=%7bADID%7d&us_privacy=%7bUSPRIVACY%7d&ifa_type=%7bIFATYPE%7d&lmt=%7bLMT%7d&app_name=%7bAPP_NAME%7d&app_bundle=%7bAPP_BUNDLE%7d&app_store_url=%7bAPP_STORE_URL%7d&url=%7bDOMAIN%7d&dnt=%7bDNT%7d&coppa=%7bCOPPA%7d&device_make=%7bDEVICE_MAKE%7d&w=%7bWIDTH%7d&h=%7bHEIGHT%7d&skip=%7bSKIPPABLE%7d&vizdartoken=eyJhdWQiOiI5MyIsIndmcGNpZCI6NDAzODYwOTY1NH0
 #EXTINF:-1 tvg-logo="https://images.vizio.com/v4/btv/1/1736206532/1/267/150/0.jpg" group-title="🎬 Movies & Platforms",FOX LOCAL Philadelphia
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00488-foxdigital-fox29philadelphiawtx-vizious/playlist.m3u8?did=%7bADID%7d&us_privacy=%7bUSPRIVACY%7d&ifa_type=%7bIFATYPE%7d&lmt=%7bLMT%7d&app_name=%7bAPP_NAME%7d&app_bundle=%7bAPP_BUNDLE%7d&app_store_url=%7bAPP_STORE_URL%7d&url=%7bDOMAIN%7d&dnt=%7bDNT%7d&coppa=%7bCOPPA%7d&device_make=%7bDEVICE_MAKE%7d&w=%7bWIDTH%7d&h=%7bHEIGHT%7d&skip=%7bSKIPPABLE%7d&vizdartoken=eyJhdWQiOiI5MyIsIndmcGNpZCI6Mzk3MjA5NzM4MX0
-#EXTINF:-1 tvg-logo="https://images.vizio.com/v4/btv/1/1736185140/1/267/150/0.jpg" group-title="🎬 Movies & Platforms",FOX LOCAL San Francisco
-https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00488-foxdigital-fox2sanfranciscoktvu-vizious/playlist.m3u8?did=%7bADID%7d&us_privacy=%7bUSPRIVACY%7d&ifa_type=%7bIFATYPE%7d&lmt=%7bLMT%7d&app_name=%7bAPP_NAME%7d&app_bundle=%7bAPP_BUNDLE%7d&app_store_url=%7bAPP_STORE_URL%7d&url=%7bDOMAIN%7d&dnt=%7bDNT%7d&coppa=%7bCOPPA%7d&device_make=%7bDEVICE_MAKE%7d&w=%7bWIDTH%7d&h=%7bHEIGHT%7d&skip=%7bSKIPPABLE%7d&vizdartoken=eyJhdWQiOiI5MyIsIndmcGNpZCI6Mzk3MjA5NzM3OX0
+#EXTINF:-1 tvg-id="555114" tvg-logo="https://canvas-lb.tubitv.com/opts/NBRBJIrLrI3V0w==/d2175866-3daf-45db-9e2c-043eac4de170/CHgQeDoFMS4xLjlAAQ==" group-title="🎬 Movies & Platforms",FOX LOCAL San Francisco
+https://live-manifest.production-public.tubi.io/live/63e50fa0-597f-45c7-a3aa-e06659e1d1a9/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://images.vizio.com/v4/btv/1/1736206514/1/267/150/0.jpg" group-title="🎬 Movies & Platforms",FOX LOCAL Seattle
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00488-foxdigital-fox13seattlekcpq-vizious/playlist.m3u8?did=%7bADID%7d&us_privacy=%7bUSPRIVACY%7d&ifa_type=%7bIFATYPE%7d&lmt=%7bLMT%7d&app_name=%7bAPP_NAME%7d&app_bundle=%7bAPP_BUNDLE%7d&app_store_url=%7bAPP_STORE_URL%7d&url=%7bDOMAIN%7d&dnt=%7bDNT%7d&coppa=%7bCOPPA%7d&device_make=%7bDEVICE_MAKE%7d&w=%7bWIDTH%7d&h=%7bHEIGHT%7d&skip=%7bSKIPPABLE%7d&vizdartoken=eyJhdWQiOiI5MyIsIndmcGNpZCI6NDAzODYwOTY1MH0
 #EXTINF:-1 tvg-logo="https://images.vizio.com/v4/btv/1/1736206520/1/267/150/0.jpg" group-title="🎬 Movies & Platforms",FOX LOCAL Tampa Bay
@@ -3712,6 +3712,8 @@ https://amg01438-amg01438c4-vizio-us-10920.playouts.now.amagi.tv/playlist/amg014
 https://amg01438-amg01438c32-vizio-us-10898.playouts.now.amagi.tv/playlist/amg01438-ewscrippscompany-ewscrippskbzk-vizious/playlist.m3u8?app_name=%7bAPP_NAME%7d&app_bundle=%7bAPP_BUNDLE%7d&app_store_url=%7bAPP_STORE_URL%7d&url=%7bDOMAIN%7d&ifa_type=%7bIFATYPE%7d&lmt=%7bLMT%7d&dnt=%7bDNT%7d&did=%7bADID%7d&us_privacy=%7bUSPRIVACY%7d&coppa=%7bCOPPA%7d&skip=%7bSKIPPABLE%7d&device_make=%7bDEVICE_MAKE%7d&w=%7bWIDTH%7d&h=%7bHEIGHT%7d&vizio_network_name=%7bVIZIO_NETWORK_NAME%7d&vizdartoken=eyJhdWQiOiI5MyIsIndmcGNpZCI6NDczNDk0OTAwNX0
 #EXTINF:-1 group-title="🎬 Movies & Platforms",KCPQ (US)
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00488-foxdigital-kcpq-lgus/playlist.m3u8
+#EXTINF:-1 tvg-id="603905" tvg-logo="https://canvas-lb.tubitv.com/opts/vy9pKAa6UDfYcA==/48a1e3e7-1088-44c2-91e4-303d9285b9cb/CHgQeDoFMS4xLjlAAQ==" group-title="🎬 Movies & Platforms",KCRA Very Sacramento 3
+https://live-manifest.production-public.tubi.io/live/f1147482-67ba-41fc-89c7-3066450c6504/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://images.vizio.com/v4/btv/1/1647826586/1/267/150/0.jpg" group-title="🎬 Movies & Platforms",KCTV5 News Kansas City
 https://amg00312-amg00312c41-amgplt0022.playout.now3.amagi.tv/ts-us-e2-n2/playlist/amg00312-amg00312c41-amgplt0022/playlist.m3u8?gpp=%7bGPP%7d&ic=%7bIC%7d&schain=%7bSCHAIN%7d&vizio_network_name=%7b%7bVIZIO_NETWORK_NAME%7d%7d&w=%7bWIDTH%7d&h=%7bHEIGHT%7d&iu=%7bIU%7d&url=%7bDOMAIN%7d&channel_name=%7bCHANNEL_NAME%7d&ifa_type=%7bIFATYPE%7d&inv_partner_domain=%7bINV_PARTNER_DOMAIN%7d&prodq=%7bPRODQ%7d&content_livestream=%7bCONTENT_LIVESTREAM%7d&coppa=0&skip=%7bSKIPPABLE%7d&device_make=%7bDEVICE_MAKE%7d&did=%7bADID%7d&is_lat=%7bIS_LAT%7d&lmt=%7bLMT%7d&app_name=%7bAPP_NAME%7d&app_store_url=%7bAPP_STORE_URL%7d&dnt=%7bDNT%7d&network_name=%7bNETWORK_NAME%7d&tv_ad_id=%7bTV_AD_ID%7d&ad_pos=%7bAD_POS%7d&gpp_sid=%7bGPP_SID%7d&pod_ad_slots=%7bPOD_AD_SLOTS%7d&us_privacy=%7bUSPRIVACY%7d&app_bundle=%7bAPP_BUNDLE%7d&idtype=%7bIDTYPE%7d&vizdartoken=eyJhdWQiOiI5MyIsIndmcGNpZCI6NDAwMzQ1MTIyM30
 #EXTINF:-1 group-title="🎬 Movies & Platforms",KDFW (US)
@@ -3752,8 +3754,12 @@ https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00488-foxdigital-kriv-lgus/playlist
 https://amg01438-amg01438c36-vizio-us-10859.playouts.now.amagi.tv/playlist/amg01438-ewscrippscompany-ewscrippskrtv-vizious/playlist.m3u8?app_name=%7bAPP_NAME%7d&app_bundle=%7bAPP_BUNDLE%7d&app_store_url=%7bAPP_STORE_URL%7d&url=%7bDOMAIN%7d&ifa_type=%7bIFATYPE%7d&lmt=%7bLMT%7d&dnt=%7bDNT%7d&did=%7bADID%7d&us_privacy=%7bUSPRIVACY%7d&coppa=%7bCOPPA%7d&skip=%7bSKIPPABLE%7d&device_make=%7bDEVICE_MAKE%7d&w=%7bWIDTH%7d&h=%7bHEIGHT%7d&vizio_network_name=%7bVIZIO_NETWORK_NAME%7d&vizdartoken=eyJhdWQiOiI5MyIsIndmcGNpZCI6NDczMzE2OTU3NX0
 #EXTINF:-1 group-title="🎬 Movies & Platforms",KSAZ (US)
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00488-foxdigital-ksaz-lgus/playlist.m3u8
+#EXTINF:-1 tvg-id="603908" tvg-logo="https://canvas-lb.tubitv.com/opts/fcUfHfBMjp70Lw==/b8f6e518-aea1-4683-b4a1-6124785d87bf/CHgQeDoFMS4xLjlAAQ==" group-title="🎬 Movies & Platforms",KSBW Very Monterey 8
+https://live-manifest.production-public.tubi.io/live/264b8144-f7b8-4845-823a-9ad20274a379/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://images.vizio.com/v4/btv/1/1736242306/1/267/150/0.jpg" group-title="🎬 Movies & Platforms",KSBY News
 https://amg01438-amg01438c17-vizio-us-10900.playouts.now.amagi.tv/playlist/amg01438-ewscrippscompany-ewscrippsksby-vizious/playlist.m3u8?app_name=%7bAPP_NAME%7d&app_bundle=%7bAPP_BUNDLE%7d&app_store_url=%7bAPP_STORE_URL%7d&url=%7bDOMAIN%7d&ifa_type=%7bIFATYPE%7d&lmt=%7bLMT%7d&dnt=%7bDNT%7d&did=%7bADID%7d&us_privacy=%7bUSPRIVACY%7d&coppa=%7bCOPPA%7d&skip=%7bSKIPPABLE%7d&device_make=%7bDEVICE_MAKE%7d&w=%7bWIDTH%7d&h=%7bHEIGHT%7d&vizio_network_name=%7bVIZIO_NETWORK_NAME%7d&vizdartoken=eyJhdWQiOiI5MyIsIndmcGNpZCI6NDczNDk0OTAxNn0
+#EXTINF:-1 tvg-id="685307" tvg-logo="https://canvas-lb.tubitv.com/opts/5QPONnYGmxuokg==/ce41ca1f-0891-40c7-a0dc-f9d13e99e750/CHgQeDoFMS4xLjlAAQ==" group-title="🎬 Movies & Platforms",KSBY News California
+https://live-manifest.production-public.tubi.io/live/8a54bc66-f8c5-4118-a5ca-01e903feca80/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://images.vizio.com/v4/btv/1/1736242382/1/267/150/0.jpg" group-title="🎬 Movies & Platforms",KSHB 41
 https://amg01438-amg01438c35-vizio-us-10899.playouts.now.amagi.tv/playlist/amg01438-ewscrippscompany-ewscrippskshb-vizious/playlist.m3u8?app_name=%7bAPP_NAME%7d&app_bundle=%7bAPP_BUNDLE%7d&app_store_url=%7bAPP_STORE_URL%7d&url=%7bDOMAIN%7d&ifa_type=%7bIFATYPE%7d&lmt=%7bLMT%7d&dnt=%7bDNT%7d&did=%7bADID%7d&us_privacy=%7bUSPRIVACY%7d&coppa=%7bCOPPA%7d&skip=%7bSKIPPABLE%7d&device_make=%7bDEVICE_MAKE%7d&w=%7bWIDTH%7d&h=%7bHEIGHT%7d&vizio_network_name=%7bVIZIO_NETWORK_NAME%7d&vizdartoken=eyJhdWQiOiI5MyIsIndmcGNpZCI6NDczNDk0OTAwN30
 #EXTINF:-1 group-title="🎬 Movies & Platforms",KTBC (US)
@@ -3766,8 +3772,8 @@ https://amg01438-amg01438c26-vizio-us-10902.playouts.now.amagi.tv/playlist/amg01
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00488-foxdigital-ktvu-lgus/playlist.m3u8
 #EXTINF:-1 tvg-id="KuriakosCine.pt@SD" tvg-logo="https://i.imgur.com/CZViCwB.jpg" group-title="🎬 Movies & Platforms",Kuriakos Cine (1080p)
 https://w2.manasat.com/kcine/smil:kcine.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="618766" tvg-logo="https://canvas-lb.tubitv.com/opts/ke_ornWShTfyaw==/19de8aa2-e268-4204-96a3-5407fe3c6632/CHgQeDoFMS4xLjlAAQ==" group-title="🎬 Movies & Platforms",KUSA 9NEWS
-https://live-manifest.production-public.tubi.io/live/9e58873a-95d7-418f-b0c9-a825e26d9454/playlist.m3u8
+#EXTINF:-1 tvg-id="644781" tvg-logo="https://canvas-lb.tubitv.com/opts/3L7TJr0xXaHO9w==/991de5a1-427b-4ed5-a594-8951c59897fc/CHgQeDoFMS4xLjlAAQ==" group-title="🎬 Movies & Platforms",KXTV Sacramento ABC10
+https://live-manifest.production-public.tubi.io/live/5dbca8cd-ea37-4522-92e3-1a9519821c6e/playlist.m3u8
 #EXTINF:-1 tvg-id="400000251" tvg-logo="https://canvas-lb.tubitv.com/opts/BYzaJwTCsR4qOQ==/d4c950c6-5131-47a1-a52b-f0644e28d89a/CHgQeDoFMS4xLjlAAQ==" group-title="🎬 Movies & Platforms",Law&Crime
 https://live-manifest.production-public.tubi.io/live/315e77b4-d6b2-410a-85fa-08243751ecc1/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://images.vizio.com/v4/btv/1/1736242469/1/267/150/0.jpg" group-title="🎬 Movies & Platforms",LEX 18 News
@@ -4697,4 +4703,4 @@ http://31.148.48.15/Russkiy_Roman_HD/index.m3u8
 #EXTINF:-1 tvg-id="FeniksplusKino.ru@SD" tvg-logo="https://i.imgur.com/S9OPMLE.png" group-title="🎬 Movies & Platforms",Феникс плюс Кино (576p)
 http://31.148.48.15/Feniks_plus_kino/index.m3u8
 
-# ✅ Total: 2342 channels | blacklist: 6773 entries
+# ✅ Total: 2345 channels | blacklist: 6773 entries
