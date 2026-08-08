@@ -6807,5 +6807,6 @@
   "https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor",
   "https://ev-eu-hw-fast-mpd.starzplayarabia.com/Zee_Cinema/dash/drm/index.mpd",
   "https://messi.damitv.st/papi/ts/starzcinema-usa/playlist.m3u8",
-  "https://live.eac-news.com/CCTV/streams/cctv6.m3u8"
+  "https://live.eac-news.com/CCTV/streams/cctv6.m3u8",
+  "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-thikrayat/8cfa8fe0c96275735745b89c683b27e3/index.m3u8"
 ]
