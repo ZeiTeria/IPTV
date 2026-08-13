@@ -6809,5 +6809,6 @@
   "https://messi.damitv.st/papi/ts/starzcinema-usa/playlist.m3u8",
   "https://live.eac-news.com/CCTV/streams/cctv6.m3u8",
   "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-thikrayat/8cfa8fe0c96275735745b89c683b27e3/index.m3u8",
-  "https://d11h6a6nhl9kj9.cloudfront.net/hls/clr4ctv_suria/master.m3u8"
+  "https://d11h6a6nhl9kj9.cloudfront.net/hls/clr4ctv_suria/master.m3u8",
+  "http://203.81.84.130/hls/mwd_document/index.m3u8"
 ]
