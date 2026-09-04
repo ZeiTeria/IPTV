@@ -6812,5 +6812,8 @@
   "https://d11h6a6nhl9kj9.cloudfront.net/hls/clr4ctv_suria/master.m3u8",
   "http://203.81.84.130/hls/mwd_document/index.m3u8",
   "http://41.205.93.154/ZEE-TV/index.m3u8",
-  "http://41.205.93.154/AMC/index.m3u8"
+  "http://41.205.93.154/AMC/index.m3u8",
+  "http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:28:41&stream=373017&extension=ts&play_token=zCaGy5dtla",
+  "http://dksmedia.tv/play/live.php?mac=00:1A:79:B6:60:3D&stream=156013&extension=ts&play_token=slNi06NyY0",
+  "http://cdn98.com/play/live.php?mac=00:1A:79:99:54:11&stream=225805&extension=ts&play_token=o1cczsG9wV"
 ]
