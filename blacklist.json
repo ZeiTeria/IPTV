@@ -6818,5 +6818,7 @@
   "http://cdn98.com/play/live.php?mac=00:1A:79:99:54:11&stream=225805&extension=ts&play_token=o1cczsG9wV",
   "https://652930de05533.streamlock.net/live/ngrp:livestream_all/playlist.m3u8",
   "https://59cba4d34b678.streamlock.net/canlitv/hunattv/playlist.m3u8",
-  "https://tv-trtgenc.medya.trt.com.tr/master.m3u8"
+  "https://tv-trtgenc.medya.trt.com.tr/master.m3u8",
+  "https://api.dani-dev.co.za/v1/stream/mytv/live/tvs",
+  "http://dksmedia.tv/play/live.php?mac=00:1A:79:B6:60:3D&stream=209743&extension=ts&play_token=mR7FwO88sY"
 ]
